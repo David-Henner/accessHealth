@@ -13,10 +13,8 @@ class ChartsViewController: UIViewController {
     
     @IBOutlet var chartsView: LineChartView!
 
-    let dollars1 = [1453.0,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
-    let dollars2 = [5641.0,2234,8763,4453,4548,6236,7321,3458,2139,399,1311,5612]
-    let dollars3 = [6541.0,3456,7843,5678,5877,7323,7111,6456,5143,4562,6311,10412]
     
+    var values = []
     let months = ["jan", "fev", "mar", "avr", "mai", "jui", "juil", "aout", "sep", "oct", "nov", "dec"]
 
     
@@ -33,11 +31,11 @@ class ChartsViewController: UIViewController {
     }
     
     func setChart() {
-        chartsView.noDataText = "You need to provide data for the chart."
+        self.chartsView.noDataText = "You need to provide data for the chart."
         
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< months.count {
-            yVals1.append(ChartDataEntry(x: dollars1[i], y: Double(i)))
+            yVals1.append(ChartDataEntry(x: values[i], y: Double(i)))
         }
         
         let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: "First Set")
@@ -51,43 +49,10 @@ class ChartsViewController: UIViewController {
         set1.highlightColor = UIColor.white
         set1.drawCircleHoleEnabled = true
         
-        var yVals2 : [ChartDataEntry] = [ChartDataEntry]()
-        for i in 0 ..< months.count {
-            yVals2.append(ChartDataEntry(x: dollars2[i], y: Double(i)))
-        }
-        
-        let set2: LineChartDataSet = LineChartDataSet(values: yVals2, label: "Second Set")
-        set2.axisDependency = .left // Line will correlate with left axis values
-        set2.setColor(UIColor.green.withAlphaComponent(0.5))
-        set2.setCircleColor(UIColor.green)
-        set2.lineWidth = 2.0
-        set2.circleRadius = 6.0
-        set2.fillAlpha = 65 / 255.0
-        set2.fillColor = UIColor.green
-        set2.highlightColor = UIColor.white
-        set2.drawCircleHoleEnabled = true
-        
-        var yVals3 : [ChartDataEntry] = [ChartDataEntry]()
-        for i in 0 ..< months.count {
-            yVals3.append(ChartDataEntry(x: dollars3[i], y: Double(i)))
-        }
-        
-        let set3: LineChartDataSet = LineChartDataSet(values: yVals3, label: "Second Set")
-        set3.axisDependency = .left // Line will correlate with left axis values
-        set3.setColor(UIColor.blue.withAlphaComponent(0.5))
-        set3.setCircleColor(UIColor.blue)
-        set3.lineWidth = 2.0
-        set3.circleRadius = 6.0
-        set3.fillAlpha = 65 / 255.0
-        set3.fillColor = UIColor.blue
-        set3.highlightColor = UIColor.white
-        set3.drawCircleHoleEnabled = true
-        
         //3 - create an array to store our LineChartDataSets
         var dataSets : [LineChartDataSet] = [LineChartDataSet]()
         dataSets.append(set1)
-        dataSets.append(set2)
-        dataSets.append(set3)
+
         
         //4 - pass our months in for our x-axis label value along with our dataSets
         let data: LineChartData = LineChartData(dataSets: dataSets)
