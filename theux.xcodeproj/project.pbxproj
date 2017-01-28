@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3B21BB1E3CC81C00E6C7D2 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B21BA1E3CC81C00E6C7D2 /* NoteTableViewCell.swift */; };
+		2F3B21BD1E3CC94C00E6C7D2 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3B21BC1E3CC94C00E6C7D2 /* NotesTableViewController.swift */; };
+		2FC7185D1E3CFD6800D42231 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7185C1E3CFD6800D42231 /* ImageCollectionViewCell.swift */; };
+		2FC718611E3D0CE500D42231 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC718601E3D0CE500D42231 /* RadioViewController.swift */; };
+		2FC718631E3D0ED700D42231 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC718621E3D0ED700D42231 /* ScannerViewController.swift */; };
 		633DE7541E3C929E008401C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7531E3C929E008401C5 /* AppDelegate.swift */; };
 		633DE7561E3C929E008401C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7551E3C929E008401C5 /* ViewController.swift */; };
 		633DE7591E3C929E008401C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DE7571E3C929E008401C5 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3B21BA1E3CC81C00E6C7D2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		2F3B21BC1E3CC94C00E6C7D2 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		2FC7185C1E3CFD6800D42231 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FC718601E3D0CE500D42231 /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
+		2FC718621E3D0ED700D42231 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		633DE7501E3C929E008401C5 /* theux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633DE7531E3C929E008401C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		633DE7551E3C929E008401C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F3B21B91E3CC7F800E6C7D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F3B21BA1E3CC81C00E6C7D2 /* NoteTableViewCell.swift */,
+				2FC7185C1E3CFD6800D42231 /* ImageCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		633DE7471E3C929E008401C5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +83,7 @@
 		633DE7521E3C929E008401C5 /* theux */ = {
 			isa = PBXGroup;
 			children = (
+				2F3B21B91E3CC7F800E6C7D2 /* Views */,
 				633DE7691E3CA37B008401C5 /* Models */,
 				633DE7531E3C929E008401C5 /* AppDelegate.swift */,
 				633DE7551E3C929E008401C5 /* ViewController.swift */,
@@ -75,6 +95,9 @@
 				633DE75A1E3C929E008401C5 /* Assets.xcassets */,
 				633DE75C1E3C929E008401C5 /* LaunchScreen.storyboard */,
 				633DE75F1E3C929E008401C5 /* Info.plist */,
+				2F3B21BC1E3CC94C00E6C7D2 /* NotesTableViewController.swift */,
+				2FC718601E3D0CE500D42231 /* RadioViewController.swift */,
+				2FC718621E3D0ED700D42231 /* ScannerViewController.swift */,
 			);
 			path = theux;
 			sourceTree = "<group>";
@@ -164,8 +187,13 @@
 				633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */,
 				633DE7561E3C929E008401C5 /* ViewController.swift in Sources */,
 				633DE7541E3C929E008401C5 /* AppDelegate.swift in Sources */,
-				6362C18B1E3CDFE100D44B99 /* DetailsTableViewController.swift in Sources */,
+				2F3B21BB1E3CC81C00E6C7D2 /* NoteTableViewCell.swift in Sources */,
 				633DE76B1E3CA38A008401C5 /* Patient.swift in Sources */,
+				2FC718611E3D0CE500D42231 /* RadioViewController.swift in Sources */,
+				2FC718631E3D0ED700D42231 /* ScannerViewController.swift in Sources */,
+				2FC7185D1E3CFD6800D42231 /* ImageCollectionViewCell.swift in Sources */,
+				2F3B21BD1E3CC94C00E6C7D2 /* NotesTableViewController.swift in Sources */,
+				6362C18B1E3CDFE100D44B99 /* DetailsTableViewController.swift in Sources */,
 				6362C18D1E3CE16800D44B99 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
