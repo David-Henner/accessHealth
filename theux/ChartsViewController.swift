@@ -14,7 +14,7 @@ class ChartsViewController: UIViewController {
     @IBOutlet var chartsView: LineChartView!
 
     
-    var values = []
+    var values = [12, 12]
     let months = ["jan", "fev", "mar", "avr", "mai", "jui", "juil", "aout", "sep", "oct", "nov", "dec"]
 
     
@@ -35,7 +35,7 @@ class ChartsViewController: UIViewController {
         
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< months.count {
-            yVals1.append(ChartDataEntry(x: values[i], y: Double(i)))
+            yVals1.append(ChartDataEntry(x: Double(values[i]), y: Double(i)))
         }
         
         let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: "First Set")
