@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
+    var id : Int!
     @IBOutlet weak var admissionLabel: UILabel!
     
     @IBOutlet weak var patientID: UILabel!
@@ -19,6 +20,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.admissionLabel.isHidden = true
+        
+        if (id != nil) {
+            print(id)
+        }
     }
     
     @IBAction func ToggleAdmission(_ sender: AnyObject) {
