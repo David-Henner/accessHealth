@@ -16,8 +16,11 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
+    private var idPatient: Int!
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var topBar: UINavigationBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +96,7 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                idPatient = Int(metadataObj.stringValue)
                 captureSession?.stopRunning()
                 self.performSegue(withIdentifier: "showProfileSegue", sender: self)
                 
@@ -101,11 +105,12 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showProfileSegue" {
-            let svc = segue.destination as! ProfileViewController
-            let idPatient = sender as! String
-            svc.id = Int(idPatient)
+            let svc = segue.destination as! UINavigationController
+            let nxtSvc = svc.viewControllers[0] as! ProfileViewController
+            print(idPatient)
+            nxtSvc.id = Int(idPatient)
         }
     }
 
