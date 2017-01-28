@@ -12,7 +12,9 @@ class NotesTableViewController: UITableViewController {
     
     @IBOutlet weak var addNote: UIBarButtonItem!
     
+    var notes = [Notes]()
     private var valuesDate = ["28/01/2017 13H10", "28/01/2017 13H30", "28/01/2017 15H10"]
+    private var names = ["Jeanne Landin", "Romain Petit", "Pierre Martin"]    
     private var valuesDesc = ["Remplir avec 500mL de soluté isotonique 0,9%", "Donner une dose d'Amiklin", "J'ai monté la noradrénaline à 2 mg/h"]
 
     override func viewDidLoad() {
@@ -40,15 +42,16 @@ class NotesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return valuesDate.count
+        return notes.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NoteTableViewCell
 
-        cell.dateHourLabel.text = valuesDate[indexPath.row]
-        cell.noteField.text = valuesDesc[indexPath.row]
+        cell.dateHourLabel.text = notes[indexPath.row].date
+        cell.noteField.text = notes[indexPath.row].text
+        cell.nameLabel.text = notes[indexPath.row].writer
         
         return cell
     }
@@ -58,8 +61,8 @@ class NotesTableViewController: UITableViewController {
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
         let currentDate = NSDate()
         
-        valuesDate.append(dateFormatter.string(from:currentDate as Date))
-        valuesDesc.append("taper pour ecrire")
+        let note = Notes(date: dateFormatter.string(from: currentDate as Date), writer: "Eleonore", text: "")
+        self.notes += [note]
         self.tableView.reloadData()
         
 
