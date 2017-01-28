@@ -12,6 +12,8 @@
 		633DE7591E3C929E008401C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DE7571E3C929E008401C5 /* Main.storyboard */; };
 		633DE75B1E3C929E008401C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 633DE75A1E3C929E008401C5 /* Assets.xcassets */; };
 		633DE75E1E3C929E008401C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DE75C1E3C929E008401C5 /* LaunchScreen.storyboard */; };
+		633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7651E3C95AE008401C5 /* ProfileViewController.swift */; };
+		633DE7681E3C9651008401C5 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7671E3C9651008401C5 /* QRReaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		633DE75A1E3C929E008401C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		633DE75D1E3C929E008401C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633DE75F1E3C929E008401C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633DE7651E3C95AE008401C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		633DE7671E3C9651008401C5 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				633DE7531E3C929E008401C5 /* AppDelegate.swift */,
 				633DE7551E3C929E008401C5 /* ViewController.swift */,
 				633DE7571E3C929E008401C5 /* Main.storyboard */,
+				633DE7651E3C95AE008401C5 /* ProfileViewController.swift */,
+				633DE7671E3C9651008401C5 /* QRReaderViewController.swift */,
 				633DE75A1E3C929E008401C5 /* Assets.xcassets */,
 				633DE75C1E3C929E008401C5 /* LaunchScreen.storyboard */,
 				633DE75F1E3C929E008401C5 /* Info.plist */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633DE7681E3C9651008401C5 /* QRReaderViewController.swift in Sources */,
+				633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */,
 				633DE7561E3C929E008401C5 /* ViewController.swift in Sources */,
 				633DE7541E3C929E008401C5 /* AppDelegate.swift in Sources */,
 			);
