@@ -20,8 +20,9 @@ class Patient {
     var arterTension : String
     var oxygenSaturation : String
     var respRate : String
+    var notes: [Notes]
     
-    init(firstName: String, lastName: String, birthDate: String, id: String, admissionMotives: String, antecedents: String, treatments: String, heartRate: String, arterTension: String, oxygenSat: String, respRate: String) {
+    init(firstName: String, lastName: String, birthDate: String, id: String, admissionMotives: String, antecedents: String, treatments: String, heartRate: String, arterTension: String, oxygenSat: String, respRate: String, notes: [Notes]) {
         self.firstName = firstName
         self.lastName = lastName
         self.birthDate = birthDate
@@ -33,5 +34,6 @@ class Patient {
         self.arterTension = arterTension
         self.oxygenSaturation = oxygenSat
         self.respRate = respRate
+        self.notes = notes
     }
 }

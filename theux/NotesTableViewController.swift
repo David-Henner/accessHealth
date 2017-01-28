@@ -14,7 +14,8 @@ class NotesTableViewController: UITableViewController {
     
     private var valuesDate = ["28/01/2017 13H10", "28/01/2017 13H30", "28/01/2017 15H10"]
     private var valuesDesc = ["Remplir avec 500mL de sérum physiologique isotonique 0,9%", "Donner une dose d'Amiklin", "J'ai monté la noradrénaline à 2 mL/h"]
-
+    private var names = ["Jeanne Landin", "Romain Petit", "Pierre Martin"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +50,7 @@ class NotesTableViewController: UITableViewController {
 
         cell.dateHourLabel.text = valuesDate[indexPath.row]
         cell.noteField.text = valuesDesc[indexPath.row]
+        cell.nameLabel.text = names[indexPath.row]
         
         return cell
     }

@@ -12,6 +12,7 @@ class NoteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateHourLabel: UILabel!
     @IBOutlet weak var noteField: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
