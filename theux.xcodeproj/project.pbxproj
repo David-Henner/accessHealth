@@ -14,6 +14,7 @@
 		633DE75E1E3C929E008401C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DE75C1E3C929E008401C5 /* LaunchScreen.storyboard */; };
 		633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7651E3C95AE008401C5 /* ProfileViewController.swift */; };
 		633DE7681E3C9651008401C5 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7671E3C9651008401C5 /* QRReaderViewController.swift */; };
+		633DE76B1E3CA38A008401C5 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE76A1E3CA38A008401C5 /* Patient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		633DE75F1E3C929E008401C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		633DE7651E3C95AE008401C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		633DE7671E3C9651008401C5 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		633DE76A1E3CA38A008401C5 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		633DE7521E3C929E008401C5 /* theux */ = {
 			isa = PBXGroup;
 			children = (
+				633DE7691E3CA37B008401C5 /* Models */,
 				633DE7531E3C929E008401C5 /* AppDelegate.swift */,
 				633DE7551E3C929E008401C5 /* ViewController.swift */,
 				633DE7571E3C929E008401C5 /* Main.storyboard */,
@@ -68,6 +71,14 @@
 				633DE75F1E3C929E008401C5 /* Info.plist */,
 			);
 			path = theux;
+			sourceTree = "<group>";
+		};
+		633DE7691E3CA37B008401C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				633DE76A1E3CA38A008401C5 /* Patient.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */,
 				633DE7561E3C929E008401C5 /* ViewController.swift in Sources */,
 				633DE7541E3C929E008401C5 /* AppDelegate.swift in Sources */,
+				633DE76B1E3CA38A008401C5 /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

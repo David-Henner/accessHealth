@@ -93,6 +93,7 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                captureSession?.stopRunning()
                 self.performSegue(withIdentifier: "showProfileSegue", sender: self)
                 
             }
@@ -100,15 +101,12 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         
     }
     
-    /*func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showProfileSegue" {
-            print("avant de get la destination hahah")
             let svc = segue.destination as! ProfileViewController
-            print("avant le get du sender en string")
             let idPatient = sender as! String
-            print(idPatient)
             svc.id = Int(idPatient)
         }
-    }*/
+    }
 
 }
