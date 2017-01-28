@@ -25,6 +25,7 @@
 		6362C18B1E3CDFE100D44B99 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362C18A1E3CDFE100D44B99 /* DetailsTableViewController.swift */; };
 		6362C18D1E3CE16800D44B99 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362C18C1E3CE16800D44B99 /* DetailViewController.swift */; };
 		6362C18F1E3D314F00D44B99 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362C18E1E3D314F00D44B99 /* Notes.swift */; };
+		63A2F5151E3D602000CF510C /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2F5141E3D602000CF510C /* Biometrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		6362C18A1E3CDFE100D44B99 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		6362C18C1E3CE16800D44B99 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6362C18E1E3D314F00D44B99 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		63A2F5141E3D602000CF510C /* Biometrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
 		AC27D5905215E5CBA2A6F29E /* Pods_theux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			children = (
 				633DE76A1E3CA38A008401C5 /* Patient.swift */,
 				6362C18E1E3D314F00D44B99 /* Notes.swift */,
+				63A2F5141E3D602000CF510C /* Biometrics.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				2F3B21BB1E3CC81C00E6C7D2 /* NoteTableViewCell.swift in Sources */,
 				633DE76B1E3CA38A008401C5 /* Patient.swift in Sources */,
 				2FC718611E3D0CE500D42231 /* RadioViewController.swift in Sources */,
+				63A2F5151E3D602000CF510C /* Biometrics.swift in Sources */,
 				2FC718631E3D0ED700D42231 /* ScannerViewController.swift in Sources */,
 				2FC7185D1E3CFD6800D42231 /* ImageCollectionViewCell.swift in Sources */,
 				2F3B21BD1E3CC94C00E6C7D2 /* NotesTableViewController.swift in Sources */,
