@@ -12,6 +12,8 @@
 		2FC7185D1E3CFD6800D42231 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7185C1E3CFD6800D42231 /* ImageCollectionViewCell.swift */; };
 		2FC718611E3D0CE500D42231 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC718601E3D0CE500D42231 /* RadioViewController.swift */; };
 		2FC718631E3D0ED700D42231 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC718621E3D0ED700D42231 /* ScannerViewController.swift */; };
+		2FC718651E3D2F2300D42231 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC718641E3D2F2300D42231 /* ChartsViewController.swift */; };
+		35FB12A1C05442EB872CB938 /* Pods_theux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC27D5905215E5CBA2A6F29E /* Pods_theux.framework */; };
 		633DE7541E3C929E008401C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7531E3C929E008401C5 /* AppDelegate.swift */; };
 		633DE7561E3C929E008401C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DE7551E3C929E008401C5 /* ViewController.swift */; };
 		633DE7591E3C929E008401C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DE7571E3C929E008401C5 /* Main.storyboard */; };
@@ -26,11 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278DD201E14B033D6DF008A5 /* Pods-theux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theux.debug.xcconfig"; path = "Pods/Target Support Files/Pods-theux/Pods-theux.debug.xcconfig"; sourceTree = "<group>"; };
+		2C2F4CC63D462857FB201396 /* Pods-theux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-theux.release.xcconfig"; path = "Pods/Target Support Files/Pods-theux/Pods-theux.release.xcconfig"; sourceTree = "<group>"; };
 		2F3B21BA1E3CC81C00E6C7D2 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		2F3B21BC1E3CC94C00E6C7D2 /* NotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		2FC7185C1E3CFD6800D42231 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FC718601E3D0CE500D42231 /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		2FC718621E3D0ED700D42231 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		2FC718641E3D2F2300D42231 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		633DE7501E3C929E008401C5 /* theux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633DE7531E3C929E008401C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		633DE7551E3C929E008401C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		6362C18A1E3CDFE100D44B99 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		6362C18C1E3CE16800D44B99 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6362C18E1E3D314F00D44B99 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		AC27D5905215E5CBA2A6F29E /* Pods_theux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_theux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +57,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FB12A1C05442EB872CB938 /* Pods_theux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0225735B64938263DA67CD28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				278DD201E14B033D6DF008A5 /* Pods-theux.debug.xcconfig */,
+				2C2F4CC63D462857FB201396 /* Pods-theux.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2F3B21B91E3CC7F800E6C7D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,8 @@
 			children = (
 				633DE7521E3C929E008401C5 /* theux */,
 				633DE7511E3C929E008401C5 /* Products */,
+				0225735B64938263DA67CD28 /* Pods */,
+				B4DA49E1CBC2A50641541E31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +103,7 @@
 		633DE7521E3C929E008401C5 /* theux */ = {
 			isa = PBXGroup;
 			children = (
+				2FC718641E3D2F2300D42231 /* ChartsViewController.swift */,
 				2F3B21B91E3CC7F800E6C7D2 /* Views */,
 				633DE7691E3CA37B008401C5 /* Models */,
 				633DE7531E3C929E008401C5 /* AppDelegate.swift */,
@@ -113,6 +132,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		B4DA49E1CBC2A50641541E31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC27D5905215E5CBA2A6F29E /* Pods_theux.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 633DE7621E3C929F008401C5 /* Build configuration list for PBXNativeTarget "theux" */;
 			buildPhases = (
+				A2ADA4B9919EC798D4E8775A /* [CP] Check Pods Manifest.lock */,
 				633DE74C1E3C929E008401C5 /* Sources */,
 				633DE74D1E3C929E008401C5 /* Frameworks */,
 				633DE74E1E3C929E008401C5 /* Resources */,
+				18F73AAEC077653E89D607E3 /* [CP] Embed Pods Frameworks */,
+				775BF56954A244C6C1A247E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,7 +170,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = david;
 				TargetAttributes = {
 					633DE74F1E3C929E008401C5 = {
@@ -181,11 +211,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18F73AAEC077653E89D607E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theux/Pods-theux-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		775BF56954A244C6C1A247E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-theux/Pods-theux-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2ADA4B9919EC798D4E8775A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		633DE74C1E3C929E008401C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC718651E3D2F2300D42231 /* ChartsViewController.swift in Sources */,
 				633DE7681E3C9651008401C5 /* QRReaderViewController.swift in Sources */,
 				6362C18F1E3D314F00D44B99 /* Notes.swift in Sources */,
 				633DE7661E3C95AE008401C5 /* ProfileViewController.swift in Sources */,
@@ -242,6 +321,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -264,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +372,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -308,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -319,7 +400,9 @@
 		};
 		633DE7631E3C929F008401C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278DD201E14B033D6DF008A5 /* Pods-theux.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8ALGG4LVX;
 				INFOPLIST_FILE = theux/Info.plist;
@@ -333,7 +416,9 @@
 		};
 		633DE7641E3C929F008401C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C2F4CC63D462857FB201396 /* Pods-theux.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E8ALGG4LVX;
 				INFOPLIST_FILE = theux/Info.plist;

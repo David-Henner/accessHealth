@@ -24,7 +24,10 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
         let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
@@ -37,7 +40,7 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             
             // Set the input device on the capture session.
             captureSession?.addInput(input)
-
+            
             // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
             let captureMetadataOutput = AVCaptureMetadataOutput()
             captureSession?.addOutput(captureMetadataOutput)
@@ -55,7 +58,7 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             // Start video capture.
             captureSession?.startRunning()
             
-        
+            
             // Move the message label and top bar to the front
             view.bringSubview(toFront: messageLabel)
             view.bringSubview(toFront: topBar)
@@ -114,4 +117,6 @@ class QRReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         }
     }
 
+    @IBAction func cancelToQRReaderViewController(segue:UIStoryboardSegue) {
+    }
 }
