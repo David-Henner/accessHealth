@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 class ProfileViewController: UIViewController {
+
+    var id : Int?
+
     var patient : Patient?
     
     // Stack view labels
+
     @IBOutlet weak var admissionLabel: UILabel!
     @IBOutlet weak var antecedentsLabel: UILabel!
     @IBOutlet weak var treatmentsLabel: UILabel!
@@ -25,6 +29,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let id = self.id {
+            print(id)
+        }
+        
         patient = Patient(
             firstName: "Jean",
             lastName: "Bon",
@@ -36,6 +44,7 @@ class ProfileViewController: UIViewController {
         
         // Setting up stack view labels
         self.admissionLabel.isHidden = true
+
         self.antecedentsLabel.isHidden = true
         self.treatmentsLabel.isHidden = true
         
