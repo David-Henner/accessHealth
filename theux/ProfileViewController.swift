@@ -50,10 +50,23 @@ class ProfileViewController: UIViewController {
     }
     
     func populatePatients() {
+        
+        // Notes for patient 1
         var notes = [Notes]()
         notes += [Notes(date: "28/01/2017 13H10", writer: "Jeanne Landin", text: "Repiration paradoxal\nHyperventilation\nFoyer de pneumopathie à l'oscultation")]
         notes += [Notes(date: "28/01/2017 13H30", writer: "Romain Petit", text: "FR = 29\nFébrile à 38,9°C\nSueurs")]
         notes += [Notes(date: "28/01/2017 15H10", writer: "Jeanne Landin", text: "Mise sous VNI\nMise sous Augmentin")]
+        
+        // Biometrics for patient 1
+        var biometrics = [Biometrics]()
+        biometrics += [Biometrics(name:"Leucocytes", values: [13, 12, 11.8, 11.8], unit: "10^9/L")]
+        biometrics += [Biometrics(name:"PNN", values: [85, 84, 82, 82], unit: "%")]
+        biometrics += [Biometrics(name:"CRP", values: [200, 170, 105, 98], unit: "mg/L")]
+        biometrics += [Biometrics(name:"Sat. O2", values: [89, 92, 92, 91], unit: "%")]
+        biometrics += [Biometrics(name:"Pa O2", values: [80, 83, 85, 88], unit: "mmHg")]
+        biometrics += [Biometrics(name:"Pa CO2", values: [60, 55, 45, 46], unit: "mmHg")]
+        biometrics += [Biometrics(name:"Bicarbonates", values: [25, 28, 24, 24], unit: "mmol")]
+            
         patients += [Patient(
             firstName: "Caroline",
             lastName: "Meyer",
@@ -66,13 +79,27 @@ class ProfileViewController: UIViewController {
             arterTension: "105/70",
             oxygenSat: "90%",
             respRate: "18",
-            notes: notes)
+            notes: notes,
+            biometrics: biometrics)
         ]
         
+        
+        // Notes for patient 2
         notes = []
         notes += [Notes(date: "26/01/2017 07H43", writer: "Dr Martin", text: "Appel chirurgiens pour avis ligatures varices oesophagiennes")]
         notes += [Notes(date: "26/01/2017 08H30", writer: "Romain Petit", text: "Remplissage par 500 mL solutés isotoniques 0,9%")]
         notes += [Notes(date: "26/01/2017 09H13", writer: "Romain Petit",text:"Commande 2 culots de GR\nMise sous Noradrénaline 1mg/h")]
+
+        // Biometrics for patient 2
+        biometrics = []
+        biometrics += [Biometrics(name:"Hb", values: [8, 8, 8.9, 10], unit: "g/dL")]
+        biometrics += [Biometrics(name:"Hf", values: [38, 38, 40, 41], unit: "%")]
+        biometrics += [Biometrics(name:"TP", values: [45, 45, 45, 45], unit: "%")]
+        biometrics += [Biometrics(name:"ASAT", values: [60, 58, 56, 52], unit: "uI/L")]
+        biometrics += [Biometrics(name:"ALAT", values: [57, 56, 50, 49], unit: "uI/L")]
+        biometrics += [Biometrics(name:"PAL", values: [115, 110, 108, 108], unit: "uI/L")]
+        biometrics += [Biometrics(name:"Gly", values: [1.56, 1.6, 1.48, 1.4], unit: "g/L")]
+
         patients += [Patient(
             firstName: "Richard",
             lastName: "Pisardi",
@@ -85,7 +112,8 @@ class ProfileViewController: UIViewController {
             arterTension: "80/50",
             oxygenSat: "97%",
             respRate: "20",
-            notes: notes)
+            notes: notes,
+            biometrics: biometrics)
         ]
     }
     
@@ -98,6 +126,14 @@ class ProfileViewController: UIViewController {
             if let id = self.id {
                 if patients.count >= id {
                     notesController?.notes = patients[id-1].notes
+                }
+            }
+        }
+        if segue.identifier == "showBio" {
+            let biometricsController = segue.destination as? BiometricsTableViewController
+            if let id = self.id {
+                if patients.count >= id {
+                    biometricsController?.biometrics = patients[id-1].biometrics
                 }
             }
         }

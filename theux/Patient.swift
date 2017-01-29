@@ -21,9 +21,9 @@ class Patient {
     var oxygenSaturation : String
     var respRate : String
     var notes: [Notes]
-    var biometrics : Biometrics
+    var biometrics : [Biometrics]
     
-    init(firstName: String, lastName: String, birthDate: String, id: String, admissionMotives: String, antecedents: String, treatments: String, heartRate: String, arterTension: String, oxygenSat: String, respRate: String, notes: [Notes], biometrics: Biometrics) {
+    init(firstName: String, lastName: String, birthDate: String, id: String, admissionMotives: String, antecedents: String, treatments: String, heartRate: String, arterTension: String, oxygenSat: String, respRate: String, notes: [Notes], biometrics: [Biometrics]) {
         self.firstName = firstName
         self.lastName = lastName
         self.birthDate = birthDate
