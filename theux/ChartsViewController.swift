@@ -14,8 +14,8 @@ class ChartsViewController: UIViewController {
     @IBOutlet var chartsView: LineChartView!
 
     
-    var values = [12, 12]
-    let months = ["jan", "fev", "mar", "avr", "mai", "jui", "juil", "aout", "sep", "oct", "nov", "dec"]
+    var bio: Biometrics!
+    var dateHour = ["22/01/17 06h00", "22/01/17 14h00", "22/01/17 20h00", "23/01/17 06h00"]
 
     
     override func viewDidLoad() {
@@ -34,11 +34,11 @@ class ChartsViewController: UIViewController {
         self.chartsView.noDataText = "You need to provide data for the chart."
         
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
-        for i in 0 ..< months.count {
-            yVals1.append(ChartDataEntry(x: Double(values[i]), y: Double(i)))
+        for i in 0 ..< dateHour.count {
+            yVals1.append(ChartDataEntry(x: Double(i), y: Double(bio.values[i])))
         }
         
-        let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: "First Set")
+        let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: bio.name)
         set1.axisDependency = .left // Line will correlate with left axis values
         set1.setColor(UIColor.red.withAlphaComponent(0.5))
         set1.setCircleColor(UIColor.red)
