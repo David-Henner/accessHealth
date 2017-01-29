@@ -12,6 +12,12 @@ import UIKit
 class BiometricsTableViewController: UITableViewController {
     var biometrics = [Biometrics]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bHeaderCell")
+        self.tableView.tableHeaderView = cell
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -40,6 +46,14 @@ class BiometricsTableViewController: UITableViewController {
 
         return cell
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "") {
+            let graphController = segue.destination as! ChartsViewController
+            if let index = tableView.indexPathForSelectedRow?.row {
+                graphController.bio = biometrics[index]
+            }
+        }
+    }
 
 }
