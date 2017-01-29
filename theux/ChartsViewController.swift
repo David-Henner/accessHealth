@@ -11,11 +11,12 @@ import Charts
 
 class ChartsViewController: UIViewController {
     
+    @IBOutlet weak var navBarTitle: UINavigationItem!
     @IBOutlet var chartsView: LineChartView!
 
     
     var bio: Biometrics!
-    var dateHour = ["22/01/17 06h00", "22/01/17 14h00", "22/01/17 20h00", "23/01/17 06h00"]
+    var dateHour = ["22/01\n06h00", "22/01\n14h00", "22/01\n20h00", "23/01\n06h00"]
 
     
     override func viewDidLoad() {
@@ -32,13 +33,15 @@ class ChartsViewController: UIViewController {
     
     func setChart() {
         self.chartsView.noDataText = "You need to provide data for the chart."
+        self.chartsView.chartDescription?.text = bio.name + " (" + bio.unit + ")"
+        navBarTitle.title = bio.name
         
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< dateHour.count {
             yVals1.append(ChartDataEntry(x: Double(i), y: Double(bio.values[i])))
         }
         
-        let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: bio.name)
+        let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: bio.name + " (" + bio.unit + ")")
         set1.axisDependency = .left // Line will correlate with left axis values
         set1.setColor(UIColor.red.withAlphaComponent(0.5))
         set1.setCircleColor(UIColor.red)
@@ -56,13 +59,11 @@ class ChartsViewController: UIViewController {
         
         //4 - pass our months in for our x-axis label value along with our dataSets
         let data: LineChartData = LineChartData(dataSets: dataSets)
-        data.setValueTextColor(UIColor.white)
+        data.setValueTextColor(UIColor.black)
      
 
-        /*
-        self.chartsView.xAxis.valueFormatter = XValsFormatter(xVals: months)
-        self.chartsView.xAxis.axisMinimum = Double(0)
-        self.chartsView.xAxis.axisMinimum = Double(months.count)*/
+        
+        self.chartsView.xAxis.valueFormatter = XValsFormatter(xVals: dateHour)
         //5 - finally set our data
         self.chartsView.data = data
         
@@ -80,7 +81,6 @@ class XValsFormatter: NSObject, IAxisValueFormatter {
     }
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        print(value)
        return xVals[Int(value)]
     }
     

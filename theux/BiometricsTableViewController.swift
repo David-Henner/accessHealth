@@ -48,7 +48,7 @@ class BiometricsTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "") {
+        if (segue.identifier == "showGraph") {
             let graphController = segue.destination as! ChartsViewController
             if let index = tableView.indexPathForSelectedRow?.row {
                 graphController.bio = biometrics[index]
